@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400&family=Lexend+Deca&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+    * {
+      --brightOrange: hsl(31, 77%, 52%);
+      --darkCyan: hsl(184, 100%, 22%);
+      --veryDarkCyan: hsl(179, 100%, 13%);
+      --transparentWhite: hsla(0, 0%, 100%, 0.75);
+      --veryLightGray: hsl(0, 0%, 95%);
+    }
+
+h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  color: var(--veryLightGray);
+  margin: 18px 0;
+  font-size: 48px;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  color: var(--transparentWhite);
+  margin-right: 10px;
+}
+
+.btn {
+  font-family: 'Lexend Deca', sans-serif;
+  border-radius: 25px;
+  border: none;
+  display: block;
+  background-color: white;
+  position: absolute;
+  bottom: 3em;
+  padding: 10px 20px;
+}
+
+.card{
+  height: 80vh;
+  padding: 10%;
+  position: relative;
+}
+
+.icon {
+  margin-top: 24px;
+  width: 50px;
+}
+#sedan {
+  background-color: var(--brightOrange);
+}
+
+#suvs {
+  background-color: var(--darkCyan);
+}
+
+#sedan button {
+  color: var(--brightOrange);
+}
+
+#suvs button {
+  color: var(--darkCyan);
+}
+
+#luxury button {
+  color: var(--veryDarkCyan);
+}
+
+#luxury {
+  background-color: var(--veryDarkCyan);
+}
+
+@media (min-width: 320px) {
+  h2 {
+    margin: 25px 0;
+  }
+
+  p {
+    margin-right: 20px;
+    line-height: 1.8;
+  }
+
+  .card{
+    height: 75vh;
+    padding: 10% 17%;
+  }
+
+  .btn {
+    padding: 16px 25px;
+  }
+
+  .icon {
+    margin-top: 24px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    width: 920px;
+    height: 500px;
+    display: flex;
+    margin: 10em auto;
+    justify-content: center;
+  }
+
+  .card{
+    height: 500px;
+    width: 307px;
+    max-width: 307px;
+    padding: 10px 32px;
+  }
+
+  .icon {
+    margin-top: 30px;
+    width: 60px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    border: 3px solid var(--veryLightGray);
+  }
+
+  #sedan button:hover {
+    background-color: var(--brightOrange);
+    color: var(--veryLightGray);
+  }
+
+  #suvs button:hover {
+    background-color: var(--darkCyan);
+    color: var(--veryLightGray);
+  }
+
+  #luxury button:hover {
+    background-color: var(--veryDarkCyan);
+    color: var(--veryLightGray);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <div class="card" id="sedan">
+      <img src="./images/icon-sedans.svg" class="icon" alt="sedan icon"/>
+      <h2>SEDANS</h2> 
+      <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your
+      next road trip.</p> 
+      <button type="button" class="btn">Learn More</button>
+    </div>
+    <div class="card" id="suvs">
+      <img src="./images/icon-suvs.svg" class="icon" alt="suv icon"/>
+      <h2>SUVS</h2> 
+      <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and
+      off-road adventures.</p> 
+      <button type="button" class="btn">Learn More</button>
+    </div>
+    
+    <div class="card" id="luxury">
+      <img src="./images/icon-luxury.svg" class="icon" alt="luxury icon"/>
+      <h2>LUXURY</h2> 
+      <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and
+      arrive in style.</p>
+      <button type="button" class="btn">Learn More</button>
+    </div>
+
+</div>
+<div class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.Coded by <a href="#">Yusuf Yetunde</a>.
+    </div>
+</body>
+</html>
